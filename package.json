@@ -1,0 +1,23 @@
+{
+  "name": "slack-meme-police",
+  "version": "1.0.0",
+  "description": "Meme people real hard if they don't post memes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/strugee/slack-meme-police.git"
+  },
+  "author": "AJ Jordan <alex@strugee.net>",
+  "license": "AGPL-3.0+",
+  "bugs": {
+    "url": "https://github.com/strugee/slack-meme-police/issues"
+  },
+  "homepage": "https://github.com/strugee/slack-meme-police#readme",
+  "dependencies": {
+    "@slack/bolt": "^3.19.0",
+    "imgflip": "^4.0.0"
+  }
+}
