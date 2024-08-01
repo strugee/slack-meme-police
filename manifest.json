@@ -1,0 +1,37 @@
+{
+    "display_information": {
+        "name": "Fun Police",
+        "description": "dont worry about it",
+        "background_color": "#ff00ff",
+        "long_description": "wouldn't you like to know?\r\n\r\nthe origins of this app are mysterious. try DM'ing me, probably after a few days after I first show up. did you know that Slack app long descriptions can't be shorter than 175 characters?"
+    },
+    "features": {
+        "bot_user": {
+            "display_name": "Fun Police",
+            "always_online": true
+        }
+    },
+    "oauth_config": {
+        "scopes": {
+            "bot": [
+                "channels:history",
+                "chat:write",
+                "im:history",
+                "reactions:write",
+                "files:write"
+            ]
+        }
+    },
+    "settings": {
+        "event_subscriptions": {
+            "request_url": "https://evolved-cobra-dear.ngrok-free.app/slack/events",
+            "bot_events": [
+                "message.channels",
+                "message.im"
+            ]
+        },
+        "org_deploy_enabled": false,
+        "socket_mode_enabled": false,
+        "token_rotation_enabled": false
+    }
+}
