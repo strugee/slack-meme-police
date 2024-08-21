@@ -51,7 +51,7 @@ app.message('', async ({ message, event, say }) => {
   if (event.channel_type !== 'channel') return;
 
   // If the user followed or mostly followed the rules, don't roast them
-  if ((event.files || []).map(f => f.mimetype.startsWith('image/')).reduce((a, b) => a || b, false)) {
+  if ((event.files || []).map(f => f.mimetype.startsWith('image/')).reduce((a, b) => a || b, false) || (URL.parse(event.text) && !event.text.includes(' '))) {
     if (event.text) {
       await app.client.reactions.add({
         channel: event.channel,
