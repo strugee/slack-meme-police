@@ -42,7 +42,19 @@ var app = new App({
 app.message('', async ({ message, event, say }) => {
   if (event.channel_type !== 'im') return;
 
-  await say("You think I'm going to give up my secrets just because you DM me?");
+  if (event.text.startsWith('sudo ')) {
+    var keywords = ['source', 'code', 'git', 'repo'];
+    
+    if (event.text.includes('sandwich')) {
+      await say('OK.');
+    } else if (keywords.map(event.text.includes.bind(event.text)).reduce((a, b) => a || b)) {
+      await say('https://github.com/strugee/slack-meme-police');
+    } else {
+      await say(`sudo: ${event.text.substr('sudo '.length)}: command not found`);
+    }
+  } else {
+    await say("You think I'm going to give up my secrets just because you DM me?");
+  }
 
   // TODO license, sudo, master, etc.
 });
