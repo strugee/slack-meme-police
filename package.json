@@ -20,6 +20,6 @@
   "dependencies": {
     "@slack/bolt": "^3.19.0",
     "chatgpt": "^5.2.5",
-    "imgflip.com": "^3.3.7"
+    "imgflip.com": "^3.3.10"
   }
 }
