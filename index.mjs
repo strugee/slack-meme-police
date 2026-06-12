@@ -77,6 +77,15 @@ app.message('', async ({ message, event, say }) => {
     return;
   }
 
+  await app.client.reactions.add({
+    channel: event.channel,
+    timestamp: event.event_ts,
+    // https://stackoverflow.com/a/4550514/1198896
+    name: vaguelyThreateningEmojis[Math.floor(Math.random() * vaguelyThreateningEmojis.length)]
+  });
+
+  return; // I'm too lazy to delete all the code I should be deleting
+
   // Let em have it
   var gptRes = await chatGPT.sendMessage(await getMemePrompt());
   // We just let this throw, and therefore abort the roast, if ChatGPT hallucinates invalid JSON
